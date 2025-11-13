@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Motion Transfer Demo</title>
+</head>
+<body>
+  <h1>Motion Transfer Demo</h1>
+
+  <h2>Retargeting Result (Video)</h2>
+  <video controls width="640">
+    <source src="assets/activating_floor_lamp_with_right_hand-485_smplx.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h2>3D Model (GLB)</h2>
+  <model-viewer src="assets/activating_floor_lamp_with_right_hand-485.glb"
+                alt="SMPL-X Motion"
+                camera-controls auto-rotate
+                style="width: 640px; height: 480px;">
+  </model-viewer>
+
+  <!-- Load Google's model-viewer component -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>
