@@ -3,29 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Motion Transfer Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .side-by-side {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .side-by-side > div {
+      flex: 1;
+      min-width: 400px;
+    }
+  </style>
 </head>
 <body>
   <h1>Motion Transfer Demo</h1>
 
-  <h2>Final smplx result (Video)</h2>
-  <video controls width="640">
-    <source src="assets/activating_floor_lamp_with_right_hand-485_smplx.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="side-by-side">
+    <div>
+      <h2>3D Model (GLB/FBX)</h2>
+      <model-viewer src="assets/activating_floor_lamp_with_right_hand-485.glb"
+                    camera-controls
+                    autoplay
+                    animation-name="Animation"
+                    style="width: 100%; height: 480px;">
+      </model-viewer>
+    </div>
+    <div>
+      <h2>Final smplx result (Video)</h2>
+      <video controls style="width: 100%; max-width: 640px;">
+        <source src="assets/activating_floor_lamp_with_right_hand-485_smplx.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
 
   <h2>Motion retarget result</h2>
   <video controls width="640">
     <source src="assets/Motion retarget.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
-  <h2>3D Model (GLB/FBX)</h2>
-  <model-viewer src="assets/activating_floor_lamp_with_right_hand-485.glb"
-              camera-controls
-              autoplay
-              animation-name="Animation"
-              style="width: 640px; height: 480px;">
-</model-viewer>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </body>
