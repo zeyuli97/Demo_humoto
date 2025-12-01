@@ -14,17 +14,16 @@
       flex-wrap: wrap;
     }
     .side-by-side > div {
-      flex: 1;
-      min-width: 400px;
+      flex: 0 0 calc(33.333% - 27px); /* Account for the 40px gap */
+      min-width: 300px;
     }
   </style>
 </head>
 <body>
-  <h1>Motion Transfer Demo</h1>
-
+  
   <div class="side-by-side">
     <div>
-      <h2>3D Model (GLB/FBX)</h2>
+      <h2>Original FBX File</h2>
       <model-viewer src="assets/activating_floor_lamp_with_right_hand-485.glb"
                     camera-controls
                     autoplay
@@ -32,8 +31,17 @@
                     style="width: 100%; height: 480px;">
       </model-viewer>
     </div>
+
     <div>
-      <h2>Final smplx result (Video)</h2>
+      <h2>Extracted BVH File</h2>
+      <video controls style="width: 100%; max-width: 640px;; height: 33%;">
+        <source src="assets/485_bvh.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div>
+      <h2>Fitted SMPLX File</h2>
       <video controls style="width: 100%; max-width: 640px;">
         <source src="assets/activating_floor_lamp_with_right_hand-485_smplx.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -41,11 +49,154 @@
     </div>
   </div>
 
-  <h2>Motion retarget result</h2>
+  <div class="side-by-side">
+    <div>
+      <h2>Original FBX File</h2>
+      <model-viewer src="assets/drag_dining_chair_on_ground_while_walking-444.glb"
+                    camera-controls
+                    autoplay
+                    animation-name="Animation"
+                    style="width: 100%; height: 480px;">
+      </model-viewer>
+    </div>
+
+    <div>
+      <h2>Extracted BVH File</h2>
+      <video controls style="width: 100%; max-width: 640px;; height: 33%;">
+        <source src="assets/444_bvh.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div>
+      <h2>Fitted SMPLX File</h2>
+      <video controls style="width: 100%; max-width: 640px;">
+        <source src="assets/drag_dining_chair_on_ground_while_walking-444_smplx.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+
+  <div class="side-by-side">
+    <div>
+      <h2>Original FBX File</h2>
+      <model-viewer src="assets/lift_and_stir_spoon_in_mug-154.glb"
+                    camera-controls
+                    autoplay
+                    animation-name="Animation"
+                    style="width: 100%; height: 480px;">
+      </model-viewer>
+    </div>
+
+    <div>
+      <h2>Extracted BVH File</h2>
+      <video controls style="width: 100%; max-width: 640px;; height: 33%;">
+        <source src="assets/154_bvh.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div>
+      <h2>Fitted SMPLX File</h2>
+      <video controls style="width: 100%; max-width: 640px;">
+        <source src="assets/lift_and_stir_spoon_in_mug-154_smplx.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+    
+
+  <div class="=side-by-side">
+  <h1>Motion retargeting</h1>
   <video controls width="640">
-    <source src="assets/Motion retarget.mp4" type="video/mp4">
+    <source src="assets/Motion retarget_1.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  <video controls width="640">
+    <source src="assets/mr_2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video controls width="640">
+    <source src="assets/mr_3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video controls width="640">
+    <source src="assets/mr_4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video controls width="640">
+    <source src="assets/mr_5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video controls width="640">
+    <source src="assets/mr_6.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  </div>
+
+
+  <h1>Limitation of the neck movement</h1>
+  <div class="side-by-side">
+    <div>
+      <h2>Original FBX File</h2>
+      <model-viewer src="assets/getting_off_bed_and_touch_table_lamp_then_grasp_clothes_from_clothes_rack-752.glb"
+                    camera-controls
+                    autoplay
+                    animation-name="Animation"
+                    style="width: 100%; height: 480px;">
+      </model-viewer>
+    </div>
+
+    <div>
+      <h2>Extracted BVH File</h2>
+      <video controls style="width: 100%; max-width: 640px;; height: 55%;">
+        <source src="assets/752_bvh.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div>
+      <h2>Fitted SMPLX File</h2>
+      <video controls style="width: 100%; max-width: 640px;">
+        <source src="assets/getting_off_bed_and_touch_table_lamp_then_grasp_clothes_from_clothes_rack-752_smplx.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="side-by-side">
+    <div>
+      <h2>Original FBX File</h2>
+      <model-viewer src="assets/cleaning_deep_plate_with_soap_and_sponge-371.glb"
+                    camera-controls
+                    autoplay
+                    animation-name="Animation"
+                    style="width: 100%; height: 480px;">
+      </model-viewer>
+    </div>
+
+    <div>
+      <h2>Extracted BVH File</h2>
+      <video controls style="width: 100%; max-width: 640px;; height: 33%;">
+        <source src="assets/371_bvh.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div>
+      <h2>Fitted SMPLX File</h2>
+      <video controls style="width: 100%; max-width: 640px;">
+        <source src="assets/cleaning_deep_plate_with_soap_and_sponge-371_smplx.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </body>
